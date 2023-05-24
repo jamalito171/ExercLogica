@@ -1,0 +1,31 @@
+<!DOCTYPE  html>
+	<html lang="pt-br">
+	<head>
+		<title> Calcula consumo </title>
+		<meta charset="utf-8">
+	</head>
+		<body>
+		<h3>Álcool ou Gasolina </h3>
+			<script>
+				function pulaLinha(){
+					document.write("<hr>");
+				}
+				var tanque = 40;
+				var caminhoComGasolina = 480;
+				var caminhoComAlcool = 300;
+				var precoDaGasolina = 2.9;
+				var precoDoAlcool = 2.40;
+				var consumoDeGasolina = caminhoComGasolina / tanque;
+				var consumoDeAlcool = caminhoComAlcool / tanque;
+				document.write("O consumo com Gasolina foi: " + consumoDeGasolina.toFixed(2));
+				pulaLinha();
+				document.write("O consumo com Álcool foi: " + consumoDeAlcool.toFixed(2));
+				pulaLinha();
+				document.write("O preço por Km rodado com Gasolina é de: "+ (consumoDeGasolina * precoDaGasolina).toFixed(2));
+				pulaLinha();
+				document.write("O preço por KM rodado com Álcool é de: "+ (consumoDeAlcool * precoDoAlcool).toFixed(2));
+			</script>
+			
+		</body>
+
+</html>

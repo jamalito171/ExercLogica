@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Dados Vitais Vitalícios </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h3> Cálculo de Batimentos e de dias</h3>
+    <script>
+        function pulaLinha(){
+					document.write("<hr>");
+				}
+        function mostraFrase(frase){
+                    document.write("<big>"+frase+"</big>");
+                    pulaLinha();
+                }
+        function calculaDias(idade){
+                    var dias = idade * 365;
+                    return dias;
+            }
+         function calculaBatimentos(dias2){
+                    var batimentos = dias2 * 24 * 60 * 80;
+                    return batimentos;
+            }
+        var nome = prompt("Qual seu nome?");
+        var idade = prompt("Quantos anos você tem?");
+        var dias2 = calculaDias(idade);
+        var batimentos2 = calculaBatimentos(dias2);
+        mostraFrase("O "+nome+" já viveu "+ dias2+ " dias.");  
+        mostraFrase("O coração de "+nome+ " já bateu "+batimentos2+" vezes. Haja Coração!!");      
+           
+
+    </script>
+
+</body>
+</html>

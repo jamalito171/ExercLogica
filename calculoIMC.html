@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Calcula IMC </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h3> Cálculo de IMC</h3>
+    <script>
+        function pulaLinha(){
+					document.write("<hr>");
+				}
+        function mostraFrase(frase){
+                    document.write("<big>"+frase+"</big>");
+                    pulaLinha();
+                }
+        function calculaIMC(altura, peso){
+                    var imc = peso/(altura * altura);
+                    return imc.toFixed(2);
+            }
+        function verificaIMC(imc){
+                    if (imc<35){
+                            if(imc>18.5){
+                                mostraFrase("Seu IMC "+imc+" está no nível considerado normal");
+                            }else{
+                                mostraFrase("Seu IMC de "+imc+" está abaixo do normal");
+                            }
+
+                    }else{
+                        mostraFrase("Seu IMC "+imc+" está acima do indicado");
+                    }
+        }
+        var nome = prompt("Qual seu nome?");
+        var peso = prompt("Qual seu peso?");
+        var altura = prompt("Qual sua altura?");
+        var imc = calculaIMC(altura,peso);
+        
+       verificaIMC(imc);
+           
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Jogo do advinha</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h3> Jogo de advinha número</h3>
+    <script>
+        function pulaLinha(){
+					document.write("<hr>");
+				}
+        function mostraFrase(frase){
+                    document.write("<big>"+frase+"</big>");
+                    pulaLinha();
+                }
+        function advinhaNumero(chute,numero){
+            if (chute == numeroPensado){
+                mostraFrase("Uau! Você acertou! O número pensado é: "+numero);
+            }else{
+                mostraFrase("Que pena. O número que você chutou foi o "+chute+" e o número pensado foi o "+numero);
+            }
+        }
+        var numeroPensado = Math.round(Math.random()*10);
+        var chute = prompt("Já pensei. Qual você acha que é?");
+        advinhaNumero(chute,numeroPensado);
+
+    </script>
+
+</body>
+</html>
