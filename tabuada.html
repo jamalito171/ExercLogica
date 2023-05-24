@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Tabuada</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h3> Tabudas</h3>
+    <script>
+        function pulaLinha(){
+					document.write("<hr>");
+				}
+        function mostraFrase(frase){
+                    document.write("<big>"+frase+"</big>");
+                    pulaLinha();
+                }
+        var numeroTabuada = parseInt(prompt("Qual tabuada você quer saber? "));
+        var multiplicador = 1;
+        
+        while( multiplicador <= numeroTabuada){
+            total = numeroTabuada * multiplicador;
+            mostraFrase(numeroTabuada+" x "+multiplicador+" = "+total);
+            multiplicador++;
+        }
+       
+       
+    </script>
+
+</body>
+</html>

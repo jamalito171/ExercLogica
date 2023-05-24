@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Anos de Copa</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h3> Quais anos tiveram ou terão Copa do Mundo</h3>
+    <script>
+        function pulaLinha(){
+					document.write("<hr>");
+				}
+        function mostraFrase(frase){
+                    document.write("<big>"+frase+"</big>");
+                    pulaLinha();
+                }
+        var anoDeCopa = parseInt(prompt("Qual ano inicial? "));
+        var anoLimite = prompt("Qual o ano limite? ");
+
+        while(anoDeCopa <= anoLimite){
+            mostraFrase(anoDeCopa+" tem Copa do Mundo!");
+            anoDeCopa = anoDeCopa + 4;
+        }
+       
+        mostraFrase("Todos esses anos, até o ano de "+anoLimite+" têm Copa.");
+    </script>
+
+</body>
+</html>
