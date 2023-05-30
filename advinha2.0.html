@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Jogo do advinha 2.0</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h3> Jogo de advinha número</h3>
+    <script>
+        function pulaLinha(){
+					document.write("<hr>");
+				}
+        function mostraFrase(frase){
+                    document.write("<big>"+frase+"</big>");
+                    pulaLinha();
+                }
+      
+        var numeroPensado = Math.round(Math.random()*100);
+        var tentativas = parseInt(prompt("Quantas chances? "));
+        var numerotentativas = 1;
+        
+        while(numerotentativas <= tentativas){
+            var chute = prompt("Diga o número: ");
+            if (chute == numeroPensado){
+                alert("Acertou miserávi");
+                break;
+
+            }else{
+                
+                if(!(chute > numeroPensado)){
+                    alert("O número é maior...tente novamente");
+                }else{
+                    alert("O número é MENOR...tente novamente");
+                }
+                numerotentativas++;
+            }        
+            
+        }
+        if(chute==numeroPensado){
+            alert("PARABÉNS!!o número é: "+numeroPensado);
+
+        }else{
+            alert("NÃO FOI DESSA VEZ! o número é: "+numeroPensado);
+        }
+           
+
+    </script>
+
+</body>
+</html>

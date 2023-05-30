@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Tabuada</title>
+    <title>Tabuada com for</title>
     <meta charset="utf-8">
 </head>
 <body>
@@ -18,16 +18,16 @@
         var multiplicador = 1;
         
         if (numeroTabuada < 10){
-            while( multiplicador <= 10){
+            for(multiplicador = 1; multiplicador <= 10; multiplicador++){
                 total = numeroTabuada * multiplicador;
                 mostraFrase(numeroTabuada+" x "+multiplicador+" = "+total);
-                multiplicador++;
+                
             }
         }else{
-                while( multiplicador <= numeroTabuada){
+                for(multiplicador = 1 ;multiplicador <= numeroTabuada; multiplicador++){
                 total = numeroTabuada * multiplicador;
                 mostraFrase(numeroTabuada+" x "+multiplicador+" = "+total);
-                multiplicador++;
+                
             }
         }
         
